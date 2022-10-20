@@ -1,0 +1,23 @@
+.header {
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    height: 120px;
+    z-index: 10;
+}
+
+.header img {
+    height: auto;
+    width: 90px;
+    margin: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        position: absolute;
+    }
+
+    .header img {
+        width: 60px;
+    }
+}

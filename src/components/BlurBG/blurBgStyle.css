@@ -1,0 +1,58 @@
+.container {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: -3;
+    position: fixed;
+    margin-top: -10px;
+}
+
+.container .box1 {
+    height: 0px;
+    width: 150%;
+    border: 100px solid rgb(253, 251, 127);    
+    animation: rotate 200s infinite;
+    z-index: -2;
+    position: absolute;
+    top: 0;
+    left: -20%;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.container .box2 {
+    height: 0px;
+    width: 150%;
+    border: 100px solid rgba(127, 148, 210, 0.9);    
+    animation: rotate2 150s infinite;
+    z-index: -2;
+    position: absolute;
+    top: 20%;
+    left: 0%;
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.container .glass {
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(40px);
+    position: fixed;
+    top: 0;
+    background-color: rgb(255, 255, 255, 0.5);
+}

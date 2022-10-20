@@ -25,6 +25,8 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -38,6 +40,30 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    --><script>
+         $(".search-btn").click(function(){
+          console.log("hi");
+           $(".wrapper2").addClass("active");
+           $(this).css("display", "none");
+           $(".search-data").fadeIn(500);
+           $(".close-btn").fadeIn(500);
+           $(".search-data .line").addClass("active");
+           setTimeout(function(){
+             $("input").focus();
+             $(".search-data label").fadeIn(500);
+             $(".search-data span").fadeIn(500);
+           }, 800);
+         });
+         $(".close-btn").click(function(){
+           $(".wrapper2").removeClass("active");
+           $(".search-btn").fadeIn(800);
+           $(".search-data").fadeOut(500);
+           $(".close-btn").fadeOut(500);
+           $(".search-data .line").removeClass("active");
+           $("input").val("");
+           $(".search-data label").fadeOut(500);
+           $(".search-data span").fadeOut(500);
+         });
+      </script>
   </body>
 </html>
