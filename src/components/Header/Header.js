@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import './headerStyle.css'
-import logo from '../../assets/stalknfts.gif'
+import logo from '../../assets/logo3.png'
 import { Link } from 'react-router-dom'
 import AOS from 'aos';
 
@@ -14,18 +14,24 @@ const Header = () => {
 
   return (
     <div className='header'>
-      <Link to="/">
-        <img 
-          src={logo} 
-          alt="" 
-          data-aos="fade-right"
-          data-aos-anchor="#example-anchor"
-          data-aos-offset="500"
-          data-aos-duration="200" 
-        />
-      </Link>
+      <img 
+        src={logo} 
+        alt="" 
+        data-aos="fade-right"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="200" 
+      />
+      <div style={{display:"flex", justifyContent:"flex-end", alignItems:"center",flexDirection:"row"}} className="nav">
+        <ul>
+          <li><Link to="/"><p>Home</p></Link></li>
+          <li><Link><p>About</p></Link></li>
+        </ul>
 
-      <Search />
+        <Search />
+      </div>
+
+      
     </div>
   )
 }

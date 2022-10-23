@@ -69,10 +69,14 @@ const Search = () => {
       <div className="close-btn">
          <span className="fas fa-times"></span>
       </div>
+      
+      <div className="search-btn">
+        <span className="fas fa-search"></span>
+      </div>
+      <div className="user">
+        <span class="fa-solid fa-user"></span>
+      </div>
       <div className="wrapper2">
-         <div className="search-btn">
-            <span className="fas fa-search"></span>
-         </div>
          <div className="search-data">
             <input 
               type="text" 

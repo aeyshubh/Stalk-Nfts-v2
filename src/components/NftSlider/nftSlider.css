@@ -1,7 +1,6 @@
 .swiper {
     width: 280px;
-    min-height: 320px;
-    background-color: transparent;
+    min-height: 330px;
     z-index: 5;
   }
 
@@ -13,6 +12,7 @@
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to top, #743ad5, #d53a9d); 
+    margin-top: 100px;
   }
 
   @media screen and (max-width:768px) {
@@ -26,8 +26,8 @@
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    border: 1px solid black;
-    padding: 5px;
+    background-color: white;
+    border: 5px solid white;
   }
 
   .card2 {
@@ -56,38 +56,38 @@
 
   .card2 .price2 {
     background-color: rgb(255, 255, 255);
-    width: 90%;
+    width: 100%;
     z-index: -1;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    margin-top: -150px;
+    margin-top: -200px;
     transition: .3s ease-in-out;
-    border-bottom-right-radius: 100%;
-    border-bottom-left-radius: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
 
   .card2:hover > div.price2 {
-    margin-top: -80px;
+    margin-top: -100px;
   }
 
   .card2 .price2 .c-price {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #1b1b1b;
     margin: 20px;
+    margin-top: 70px;
+    margin-bottom: 0px;
   }
 
   .card2 .price2 p img {
-    width: 15px;
+    width: 20px;
     height: auto;
-    margin-left: -20px;
-    margin-top: 50px;
+    margin-left: -10px;
+    margin-top: 40px;
   }
 
   .card2 .price2 .c-price .eth {
@@ -109,7 +109,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 0px;
   }
 
 }

@@ -6,13 +6,13 @@ const AddressList = () => {
     <div className='table'>
 
         <div className='table-title'>
-            <p>Top Searches</p>
+            <p>Top Searches <i class="fa-solid fa-arrow-trend-up"></i></p>
         </div>
 
         {/* Header */}
         <div className='table-header'>
             <div className='table-address'>
-              <p>Wallet Address</p>
+              <p><i class="fa-regular fa-address-card"></i> &nbsp; &nbsp;Wallet Address</p>
             </div>
             <div className='table-nfts'>
               <p>Total NFTs</p>

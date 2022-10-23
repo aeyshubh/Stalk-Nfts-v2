@@ -3,6 +3,11 @@
     width: 100%;
     height: 400px;
     padding: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30%;
 }
 
 .table .table-title p {
@@ -15,18 +20,18 @@
     border-image-slice: 1;
     border-width: 5px;
     border-image-source: linear-gradient(to top, #743ad5, #d53a9d);   
-    width: 300px;  
+    width: 350px;  
 }
 
 .table .table-header {
     background-color: white;
     width: 100%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid black;
     padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 
 .table-header .table-address {
@@ -39,8 +44,8 @@
 }
 
 .table-header .table-nfts {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
 }
 
 .table-header .table-nfts, .table-header .table-value {
@@ -49,7 +54,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .table-value img {
@@ -65,16 +70,15 @@
 /*  */
 
 .table .content-table {
-    background-color: white;
     width: 100%;
     border-radius: 0 0 20px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
     padding: 5px;
     margin-top: 20px;
     flex-direction: column;
+    font-size: 1.2rem;
 }
 
 .table .table-data {
@@ -84,6 +88,9 @@
     justify-content: space-around;
     align-items: center;
     padding: 5px;
+    margin: 10px 0 10px 0;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .table-data .wallet-address {
@@ -97,8 +104,8 @@
 }
 
 .table-data .total-nfts {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
 }
 
 .table-data .total-nfts, .table-data .nft-value {
@@ -107,7 +114,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 .nft-value img {
@@ -125,7 +132,11 @@
     text-align: center;
 }
 
-@media screen and (max-width:768px) {
+@media all and (max-width:768px) {
+    .table {        
+        padding: 10px;
+        margin-top: 600px;
+    }
     .table-header .table-address {
         width: 50%;
     }
@@ -133,7 +144,15 @@
         font-size: 1rem;
         text-align: center;
     }
+    .table-data p {
+        padding: 3px;
+        font-size: .9rem;
+        text-align: center;
+    }
     .table-value img {
+        width: 10px;
+    }
+    .nft-value img {
         width: 10px;
     }
 }

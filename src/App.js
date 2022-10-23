@@ -5,14 +5,14 @@ import {
   Route,
   Routes
 } from 'react-router-dom';
-import BlurBg from './components/BlurBG/BlurBg';
 
 import 'aos/dist/aos.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
-    <div className="App">  
-        <BlurBg />
+    <div className="App"> 
+      <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/nft-collection" element={<NftCollection />} />
