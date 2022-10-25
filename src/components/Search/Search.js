@@ -1,100 +1,40 @@
-import React, {useEffect, useState} from 'react'
-import './searchStyle.css'
-import $ from 'jquery';
+import React, { useState, useContext } from "react";
+import "./searchStyle.css";
+import Loading from "../LoadingSpinner/Loading";
+import Auth from "../../context/Auth";
 import 'antd/dist/antd.css';
 
-import { useNavigate } from 'react-router-dom';
-import Loading from '../LoadingSpinner/Loading';
-
-  
 const Search = () => {
 
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate()
+	const { loadingAnime, setInputValue, loading } = useContext(Auth)
 
-  const loadingAnime = () => {
-    setLoading(true);
 
-    //some async process
-    // fetch('my/API/Endpoint', {
-    //   method: 'post',
-    //   body: "data",
-    // }).then((data) => {
-    //   setLoading(false);
-    // });
-
-    setTimeout(() => {
-      setLoading(false)
-
-      $(".wrapper2").removeClass("active");
-      $(".search-btn").fadeIn(800);
-      $(".search-data").fadeOut(500);
-      $(".close-btn").fadeOut(500);
-      $(".search-data .line").removeClass("active");
-      $("input").val("");
-      $(".search-data label").fadeOut(500);
-      $(".search-data span").fadeOut(500);
-      
-      navigate("/nft-collection")
-    }, 2000)
-  }
-
-  useEffect(() => {
-    $(".search-btn").on('click', function(){  
-       $(".wrapper2").addClass("active");
-       $(this).css("display", "none");
-       $(".search-data").fadeIn(500);
-       $(".close-btn").fadeIn(500);
-       $(".search-data .line").addClass("active");
-       setTimeout(function(){
-         $(".search-data label").fadeIn(500);
-         $(".search-data span").fadeIn(500);
-       }, 800); 
-     });
-              
-     $(".close-btn").on('click', function(){
-       $(".wrapper2").removeClass("active");
-       $(".search-btn").fadeIn(800);
-       $(".search-data").fadeOut(500);
-       $(".close-btn").fadeOut(500);
-       $(".search-data .line").removeClass("active");
-       $("input").val("");
-       $(".search-data label").fadeOut(500);
-       $(".search-data span").fadeOut(500);
-     });
-  })
-    
   return (
-    <div className='search'>
-      <div className="close-btn">
-         <span className="fas fa-times"></span>
-      </div>
-      
-      <div className="search-btn">
-        <span className="fas fa-search"></span>
-      </div>
-      <div className="user">
-        <span class="fa-solid fa-user"></span>
-      </div>
-      <div className="wrapper2">
-         <div className="search-data">
-            <input 
-              type="text" 
-              required 
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  loadingAnime()
-                }
-              }} 
-            />
-            <div className="line"></div>
-            <label> Wallet Address...</label>
-            {loading ? <Loading /> : <span className="fas fa-search" onClick={loadingAnime}></span>}
-            
-         </div>
-      </div>
+    <div className="search-container">
+      <input
+        className="search"
+        id="searchleft"
+        type="text"
+        placeholder="Search"
+        autoComplete="off"
+        onKeyDown={(e) => {
+          if (e.key === "Enter") {
+            loadingAnime();
+          }
+        }}
+        onChange={(e) => setInputValue(e.target.value)}
+      />
+      <label className="button searchbutton" for="searchleft">
+        {loading ? (
+          <Loading />
+        ) : (
+          <span className="mglass" onClick={loadingAnime}>
+            &#9906;
+          </span>
+        )}
+      </label>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;

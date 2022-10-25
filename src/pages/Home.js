@@ -2,7 +2,6 @@ import React from "react";
 import AddressList from "../components/AddressList/AddressList";
 import NftSlider from "../components/NftSlider/NftSlider";
 import "./homeStyle.css";
-import BlurBg from "../components/BlurBG/BlurBg";
 import About from "../components/About/About";
 
 const Home = () => {
@@ -17,7 +16,6 @@ const Home = () => {
         background: "aliceblue",
       }}
     >
-      <BlurBg />
       <div className="moto">
         <div class="patterns">
           <svg width="100%" height="50%">
