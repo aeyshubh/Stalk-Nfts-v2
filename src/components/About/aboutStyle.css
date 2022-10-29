@@ -1,13 +1,14 @@
 .about-container {
     position: relative;
     width: 100%;
-    margin-top: 300px;
+    margin-top: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .about-container img{
@@ -40,5 +41,10 @@
 @media screen and (max-width:768px) {
     .about-container .bg2 {
         display: none;
+    }
+
+    
+    .members {
+        margin-top: 100px;
     }
 }

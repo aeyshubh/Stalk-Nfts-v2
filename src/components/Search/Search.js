@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import "./searchStyle.css";
 import Loading from "../LoadingSpinner/Loading";
 import Auth from "../../context/Auth";
@@ -6,8 +6,7 @@ import 'antd/dist/antd.css';
 
 const Search = () => {
 
-	const { loadingAnime, setInputValue, loading } = useContext(Auth)
-
+  const { loadingAnime, setInputValue, loading } = useContext(Auth)
 
   return (
     <div className="search-container">
