@@ -73,7 +73,7 @@ const Card = () => {
                     MORE...
                   </Button>
                   <Modal
-                    title={currItem.price_l}
+                    title={currItem.name_l}
                     open={isModalOpen}
                     onOk={handleOk}
                     onCancel={handleCancel}
