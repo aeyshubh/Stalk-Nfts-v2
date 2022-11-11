@@ -8,6 +8,7 @@ import {
 
 import 'aos/dist/aos.css';
 import Header from './components/Header/Header';
+import Account from './pages/Account';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/nft-collection" element={<NftCollection />} />
+          <Route exact path="/account" element={<Account />} />
         </Routes>        
     </div>    
   );

@@ -16,7 +16,6 @@ const NftSlider = () => {
 
   return (
     <div className="nftslider" title='Swipe me'>
-      <p className='slider-title' style={{ fontSize: "2.1rem", fontWeight: 800 }}>Top NFTs</p>
       <Swiper
         effect={"cards"}
         grabCursor={true}

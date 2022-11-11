@@ -40,20 +40,21 @@ ul li p {
     padding: 7px 20px;
     font-weight: 500;
     transition: .3s;
-    width: 100px;
+    width: 150px;
     text-align: center;
     border-top: 3px solid transparent;
     border-right: 3px solid transparent;
     border-left: 3px solid transparent;
-    border-bottom: 3px solid #5E17EB;
+    border-bottom: 3px solid #5E17EB; 
 }
 
 ul li p:hover {
-    border-radius: 5px;
-    background-color: white;
+    border-radius: 100px;
+    background-color: #5E17EB;
     border: 3px solid #5E17EB;
-    color: #1b1b1b;
-}
+    color: #fff;
+} 
+
 
 @media screen and (max-width:1124px) and (min-width:769px) {
 
@@ -236,3 +237,14 @@ ul li p:hover {
     width: 100%;
 }
 
+.metamask {
+    padding: 0px;
+    border: none;
+    font-size: .8rem;
+    white-space:normal;
+}
+
+.metamask:hover {
+    border: none;
+    background-color: transparent;
+}
